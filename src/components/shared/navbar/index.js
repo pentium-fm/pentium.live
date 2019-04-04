@@ -5,7 +5,7 @@ import Logo from '../../logo.svg'
 class Navbar extends Component {
   render () {
     return (
-      <div className="flex flex-no-wrap content-start items-center bg-black flex-grow">
+      <div className="flex flex-no-wrap content-start items-center bg-white shadow border-b flex-grow">
         <div className="flex w-1/2 items-center">
           <div className="flex w-16 h-16 items-center">
             <Link to="/" className="w-16">
