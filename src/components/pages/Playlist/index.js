@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Episode from './Episode'
 import Player from './Player'
+import Disc from '../../../images/typehints_disc.png'
 
 class Playlist extends Component {
   constructor(props) {
@@ -25,7 +26,7 @@ class Playlist extends Component {
           title: item.querySelector('title').textContent,
           description: item.querySelector('description').textContent.replace(/(<([^>]+)>)/ig,""),
           audio: item.querySelector('enclosure').getAttribute('url'),
-          image: item.getElementsByTagName('itunes:image')[0].getAttribute('href')
+          image: Disc
         }
       })
 

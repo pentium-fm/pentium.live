@@ -15,7 +15,7 @@ class Episode extends Component {
     return (
       <div className="flex flex-wrap w-full items-center px-5 pt-3 bg-grey-custom-light">
         <div className="w-1/4">
-          <img className="w-16 h-16" alt={episode.title} src={episode.image} />
+          <img className="w-12 h-12" alt={episode.title} src={episode.image} />
         </div>
         <div className="flex w-3/4 border-b pb-3">
           <div className="flex items-center flex-wrap justify-start w-3/4">
