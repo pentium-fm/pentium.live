@@ -15,15 +15,15 @@ class Navbar extends Component {
         </div>
         <div className="flex w-1/2 items-center justify-end">
           <div className="flex flex-no-wrap content-start items-center">
-            <ul className="flex w-full list-reset text-white">
-              <li className="p-5 text-grey-light">
-                <Link to="/about" className="hover:text-blue-darker no-underline text-white">About</Link>
+            <ul className="flex w-full list-reset">
+              <li className="p-5">
+                <Link to="/about" className="hover:text-grey-darker no-underline text-grey">About</Link>
               </li>
-              <li className="p-5 text-grey-light">
-                <Link to="/playlist" className="hover:text-blue-darker no-underline text-white">Playlist</Link>
+              <li className="p-5">
+                <Link to="/playlist" className="hover:text-grey-darker no-underline text-grey">Playlist</Link>
               </li> 
-              <li className="p-5 text-grey-light">
-                <Link to="/contact" className="hover:text-blue-darker no-underline text-white">Contact</Link>
+              <li className="p-5">
+                <Link to="/contact" className="hover:text-grey-darker no-underline text-grey">Contact</Link>
               </li>
             </ul>
           </div>

@@ -8,7 +8,9 @@ class Playlist extends Component {
     super(props)
     // set state
     this.state = {
-      episodes: []
+      episodes: [],
+      currentPlaying: null,
+      playStatus: false
     }
   }
 
@@ -20,7 +22,6 @@ class Playlist extends Component {
       let document = parser.parseFromString(xml, "application/xml")
       // set array of items
       let items = Array.from(document.getElementsByTagName('item')).map((item) => {
-        console.log(item)
         return {
           guid: item.querySelector('guid').textContent,
           title: item.querySelector('title').textContent,
@@ -36,17 +37,25 @@ class Playlist extends Component {
     })
   }
 
+  setCurrentPlaying = (currentPlaying) => {
+    this.setState({currentPlaying})
+  }
+
   render() {
     return (
-      <div className="container-fluid">
-        <div className="flex flex-wrap w-full sm:w-3/4 h-full">
+      <div className="container-fluid lg:container flex flex-wrap flex-row md:flex-row-reverse">
+        <div className="flex flex-wrap w-full md:w-2/3 lg:w-3/4 h-full">
           <Player />
         </div>
-        <div className="flex flex-wrap w-full sm:w-1/4 h-full">
+        <div className="flex flex-wrap w-full md:w-1/3 lg:w-1/4 h-full">
           {this.state.episodes.map(episode => {
             return (
               <div className="flex flex-wrap w-full" key={episode.guid}>
-                <Episode episode={episode} />
+                <Episode episode={episode}
+                  guid={episode.guid}
+                  setCurrentPlaying={this.setCurrentPlaying}
+                  currentPlaying={this.state.currentPlaying}
+                />
               </div>
             )
           })}
