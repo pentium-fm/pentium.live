@@ -2,4 +2,4 @@
 @tailwind components;
 @tailwind utilities;
 
-@import './animations/rotate.scss'
+@import './animations/rotate.css'

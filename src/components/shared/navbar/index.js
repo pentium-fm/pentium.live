@@ -9,7 +9,7 @@ class Navbar extends Component {
         <div className="flex w-1/2 items-center">
           <div className="flex w-16 h-16 items-center">
             <Link to="/" className="w-16">
-              <img src={Logo} alt="typehints" />
+              <img src={Logo} alt="Pentium" />
             </Link>
           </div>
         </div>

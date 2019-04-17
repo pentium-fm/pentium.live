@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Episode from './Episode'
 import Player from './Player'
-import Disc from '../../../images/typehints_disc.png'
+import Disc from '../../../images/pentium-logo.jpg'
 
 class Playlist extends Component {
   constructor(props) {
@@ -10,7 +10,8 @@ class Playlist extends Component {
     this.state = {
       episodes: [],
       currentPlaying: null,
-      playStatus: false
+      playStatus: false,
+      playPauseStatus: 'paused'
     }
   }
 
@@ -41,19 +42,27 @@ class Playlist extends Component {
     this.setState({currentPlaying})
   }
 
+  setPlayPauseStatus = (playPauseStatus) => {
+    playPauseStatus = playPauseStatus ? 'playing' : 'paused'
+    this.setState({playPauseStatus})
+  }
+
   render() {
+    let {playPauseStatus} = this.state
+
     return (
       <div className="container-fluid lg:container flex flex-wrap flex-row md:flex-row-reverse">
-        <div className="flex flex-wrap w-full md:w-2/3 lg:w-3/4 h-full">
-          <Player />
+        <div className="flex flex-wrap w-full md:w-2/3 lg:w-3/4">
+          <Player currentState={playPauseStatus} />
         </div>
-        <div className="flex flex-wrap w-full md:w-1/3 lg:w-1/4 h-full">
+        <div className="flex flex-wrap w-full md:w-1/3 lg:w-1/4 flex-grow max-h-sm overflow-auto">
           {this.state.episodes.map(episode => {
             return (
               <div className="flex flex-wrap w-full" key={episode.guid}>
                 <Episode episode={episode}
                   guid={episode.guid}
                   setCurrentPlaying={this.setCurrentPlaying}
+                  setPlayPauseStatus={this.setPlayPauseStatus}
                   currentPlaying={this.state.currentPlaying}
                 />
               </div>

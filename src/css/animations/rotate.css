@@ -1,6 +1,12 @@
 .rotate-center {
 	-webkit-animation: rotate-center 10s linear infinite both;
-	        animation: rotate-center 10s linear infinite both;
+          animation: rotate-center 10s linear infinite both;
+}
+.rotate-center.playing {
+  animation-play-state: running;
+}
+.rotate-center.paused {
+  animation-play-state: paused;
 }
 /**
  * ----------------------------------------
