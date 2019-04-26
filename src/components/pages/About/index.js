@@ -11,7 +11,7 @@ class About extends Component {
             dialect aka Darija) hosted by{" "}
             <b>
               {" "}
-              <a href="https://twitter.com/Ginix_Labs">Hussein Jeffery</a>
+              <a href="https://twitter.com/JefferyHus">Hussein Jeffery</a>
             </b>{" "}
             and
             <b>
