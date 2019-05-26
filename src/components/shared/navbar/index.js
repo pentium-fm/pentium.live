@@ -7,9 +7,14 @@ class Navbar extends Component {
     return (
       <div className="flex flex-no-wrap content-start items-center bg-white shadow border-b flex-grow">
         <div className="flex w-1/2 items-center">
-          <div className="flex w-16 h-16 items-center">
+          <div className="flex w-16 h-16 items-center m-3">
             <Link to="/" className="w-16">
-              <img src={Logo} alt="Pentium" />
+              <img
+                width="64"
+                height="64"
+                src={"/static/media/pentium-logo.4b0953b2.jpg"}
+                alt="Pentium"
+              />
             </Link>
           </div>
         </div>
