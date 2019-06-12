@@ -43,6 +43,8 @@ class Playlist extends Component {
   }
 
   setCurrentPlaying = currentPlaying => {
+    var sounds = document.getElementsByTagName("audio");
+    for (let i = 0; i < sounds.length; i++) sounds[i].pause();
     this.setState({ currentPlaying });
   };
 
