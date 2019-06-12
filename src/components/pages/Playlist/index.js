@@ -8,6 +8,7 @@ class Playlist extends Component {
     super(props);
     // set state
     this.state = {
+      episode: null,
       episodes: [],
       currentPlaying: null,
       playStatus: false,
@@ -46,6 +47,10 @@ class Playlist extends Component {
     var sounds = document.getElementsByTagName("audio");
     for (let i = 0; i < sounds.length; i++) sounds[i].pause();
     this.setState({ currentPlaying });
+
+    this.state.episode = this.state.episodes
+      .filter(ep => ep.guid == currentPlaying)
+      .pop();
   };
 
   setPlayPauseStatus = playPauseStatus => {
@@ -59,7 +64,7 @@ class Playlist extends Component {
     return (
       <div className="container-fluid lg:container flex flex-wrap flex-row md:flex-row-reverse">
         <div className="flex flex-wrap w-full md:w-2/3 lg:w-3/4">
-          <Player currentState={playPauseStatus} />
+          <Player episode={this.state.episode} currentState={playPauseStatus} />
         </div>
         <div className="flex flex-wrap w-full md:w-1/3 lg:w-1/4 flex-grow max-h-sm overflow-auto">
           {this.state.episodes.map(episode => {

@@ -3,7 +3,7 @@ import Disc from "../../../../images/pentium-logo.jpg";
 
 class Player extends Component {
   render() {
-    let { currentState } = this.props;
+    let { currentState, episode } = this.props;
 
     return (
       <div className="flex items-center justify-center flex-wrap w-full">
@@ -21,7 +21,12 @@ class Player extends Component {
             </div>
           </div>
         </div>
-        <div className="w-full"> </div>
+        <div className="w-full" />
+
+        <h3>{episode ? episode.title : ""}</h3>
+        <p style={{ textAlign: "center" }}>
+          {episode ? episode.description : ""}{" "}
+        </p>
       </div>
     );
   }
