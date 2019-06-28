@@ -17,7 +17,7 @@ class App extends Component {
         <div className="main h-full">
           <Navbar />
           <Switch>
-            <Route path="/" exact component={Playlist} />
+            <Route path="/" exact component={Home} />
             <Route path="/about" component={About} />
             <Route path="/playlist" component={Playlist} />
             <Route path="/contact" component={Contact} />

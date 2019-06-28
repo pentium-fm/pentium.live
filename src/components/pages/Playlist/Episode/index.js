@@ -42,13 +42,13 @@ class Episode extends Component {
     let { isPlaying, playPauseButton } = this.state;
 
     return (
-      <div className="flex flex-wrap w-full items-center px-5 pt-3 bg-grey-custom-light">
-        <div className="w-1/4 pr-8">
+      <div className="flex flex-wrap w-full items-center px-5 pt-3">
+        <div className="w-1/4 pr-6">
           <div
             className="w-full h-12 relative bg-center bg-cover"
             style={{ backgroundImage: `url(${episode.image})` }}
           >
-            <div className="flex items-center justify-center black-transparent pin z-10 absolute">
+            <div className="flex items-center justify-center black-transparent inset-0 z-10 absolute">
               <FontAwesomeIcon
                 icon={playPauseButton}
                 className="text-white"
@@ -66,12 +66,12 @@ class Episode extends Component {
         <div className="flex w-3/4 border-b pb-3">
           <div className="flex items-center flex-wrap justify-start w-3/4">
             <div className="w-full py-2">
-              <span className="block font-bold text-sm text-grey-custom-dark truncate">
+              <span className="block font-bold text-sm text-gray-custom-dark truncate">
                 {episode.title}
               </span>
             </div>
             <div className="w-full py-2">
-              <p className="font-base text-xs text-grey-custom truncate">
+              <p className="font-base text-xs text-gray-custom truncate">
                 {episode.description}
               </p>
             </div>
@@ -89,7 +89,7 @@ class Episode extends Component {
             >
               <source src={episode.audio} type="audio/mpeg" />
             </audio>
-            <FontAwesomeIcon icon={faEllipsisV} className="text-grey-custom" />
+            <FontAwesomeIcon icon={faEllipsisV} className="text-gray-custom" />
           </div>
         </div>
       </div>

@@ -1,0 +1,11 @@
+html, body {
+  height: 100%;
+}
+
+.transition {
+  transition: all ease-in-out 300ms;
+}
+
+.left-n {
+  left: -18rem;
+}

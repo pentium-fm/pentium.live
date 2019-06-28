@@ -46,11 +46,9 @@ class Playlist extends Component {
   setCurrentPlaying = currentPlaying => {
     var sounds = document.getElementsByTagName("audio");
     for (let i = 0; i < sounds.length; i++) sounds[i].pause();
-    this.setState({ currentPlaying });
-
-    this.state.episode = this.state.episodes
-      .filter(ep => ep.guid == currentPlaying)
-      .pop();
+    this.setState({
+      currentPlaying
+    });
   };
 
   setPlayPauseStatus = playPauseStatus => {
@@ -66,20 +64,22 @@ class Playlist extends Component {
         <div className="flex flex-wrap w-full md:w-2/3 lg:w-3/4">
           <Player episode={this.state.episode} currentState={playPauseStatus} />
         </div>
-        <div className="flex flex-wrap w-full md:w-1/3 lg:w-1/4 flex-grow max-h-sm overflow-auto">
-          {this.state.episodes.map(episode => {
-            return (
-              <div className="flex flex-wrap w-full" key={episode.guid}>
-                <Episode
-                  episode={episode}
-                  guid={episode.guid}
-                  setCurrentPlaying={this.setCurrentPlaying}
-                  setPlayPauseStatus={this.setPlayPauseStatus}
-                  currentPlaying={this.state.currentPlaying}
-                />
-              </div>
-            );
-          })}
+        <div className="flex flex-wrap w-full md:w-1/3 lg:w-1/4 flex-grow max-h-xs lg:max-h-screen bg-gray-custom-light overflow-hidden">
+          <div className="flex flex-wrap w-full h-full overflow-auto">
+            {this.state.episodes.map(episode => {
+              return (
+                <div className="flex flex-wrap w-full" key={episode.guid}>
+                  <Episode
+                    episode={episode}
+                    guid={episode.guid}
+                    setCurrentPlaying={this.setCurrentPlaying}
+                    setPlayPauseStatus={this.setPlayPauseStatus}
+                    currentPlaying={this.state.currentPlaying}
+                  />
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     );
