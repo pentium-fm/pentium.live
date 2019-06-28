@@ -55,6 +55,7 @@ class Episode extends Component {
                 onClick={() => {
                   setCurrentPlaying(guid);
                   setPlayPauseStatus(!isPlaying);
+
                   // change bars status
                   this.setPlayStatus(currentPlaying === guid);
                 }}

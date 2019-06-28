@@ -17,6 +17,7 @@ class Navbar extends Component {
               />
             </Link>
           </div>
+          <h2>PENTIUM RADIO</h2>
         </div>
         <div className="flex w-1/2 items-center justify-end">
           <div className="flex flex-no-wrap content-start items-center">
