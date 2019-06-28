@@ -1,15 +1,20 @@
-import React, { Component } from 'react'
-import {Link} from 'react-router-dom'
-import Logo from '../../logo.svg'
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import Logo from "../../logo.svg";
 
 class Navbar extends Component {
-  render () {
+  render() {
     return (
       <div className="flex flex-no-wrap content-start items-center bg-white shadow border-b flex-grow">
         <div className="flex w-1/2 items-center">
-          <div className="flex w-16 h-16 items-center">
+          <div className="flex w-16 h-16 items-center m-3">
             <Link to="/" className="w-16">
-              <img src={Logo} alt="Pentium" />
+              <img
+                width="64"
+                height="64"
+                src={"/static/media/pentium-logo.4b0953b2.jpg"}
+                alt="Pentium"
+              />
             </Link>
           </div>
         </div>
@@ -17,20 +22,35 @@ class Navbar extends Component {
           <div className="flex flex-no-wrap content-start items-center">
             <ul className="flex w-full list-reset">
               <li className="p-5">
-                <Link to="/about" className="hover:text-grey-darker no-underline text-grey">About</Link>
+                <Link
+                  to="/about"
+                  className="hover:text-grey-darker no-underline text-grey"
+                >
+                  About
+                </Link>
               </li>
               <li className="p-5">
-                <Link to="/playlist" className="hover:text-grey-darker no-underline text-grey">Playlist</Link>
-              </li> 
+                <Link
+                  to="/playlist"
+                  className="hover:text-grey-darker no-underline text-grey"
+                >
+                  Playlist
+                </Link>
+              </li>
               <li className="p-5">
-                <Link to="/contact" className="hover:text-grey-darker no-underline text-grey">Contact</Link>
+                <Link
+                  to="/contact"
+                  className="hover:text-grey-darker no-underline text-grey"
+                >
+                  Contact
+                </Link>
               </li>
             </ul>
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default Navbar
+export default Navbar;
