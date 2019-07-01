@@ -14,7 +14,7 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="main h-full">
+        <div className="main h-full bg-gradient-custom text-white">
           <Navbar />
           <Switch>
             <Route path="/" exact component={Home} />

@@ -1,11 +1,12 @@
 html, body {
   height: 100%;
 }
-
 .transition {
   transition: all ease-in-out 300ms;
 }
-
 .left-n {
   left: -18rem;
+}
+.bg-gradient-custom {
+  background-image: linear-gradient(0deg, #436edf 0%, #9d1ecf 100%);
 }
