@@ -1,8 +1,16 @@
-import React, { Component } from 'react';
-import Slider from '../../shared/slider'
+import React, { Component } from "react";
+import Slider from "../../shared/slider";
+import { connect } from "react-redux";
+
+import * as actions from "../../../actions";
 
 class Home extends Component {
-  render () {
+  componentDidMount() {
+    this.props.getAllEpisodes();
+
+    setTimeout(_ => console.log(this.props.episodes), 1000);
+  }
+  render() {
     return (
       <main className="container-fluid">
         <Slider />
@@ -12,8 +20,13 @@ class Home extends Component {
           </div>
         </div>
       </main>
-    )
+    );
   }
 }
 
-export default Home
+const mapStateToProps = state => state;
+
+export default connect(
+  mapStateToProps,
+  actions
+)(Home);
