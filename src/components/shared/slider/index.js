@@ -51,53 +51,58 @@ class Slider extends Component {
             </div>
           </div>
 
-          <div class="flex mb-12">
-            <div className="mx-1">
-              {" "}
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy84ODlmMTJjL3BvZGNhc3QvcnNz"
-              >
-                {" "}
-                <img src={google} alt="google" />
-              </a>{" "}
+          <div class="flex flex-col">
+            <div class="">
+              <h2>MORE PLACES TO LISTEN</h2>
             </div>
-            <div className="mx-1">
-              {" "}
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://open.spotify.com/show/5zU91Rj1Q9WRLf24d2qQHt"
-              >
+            <div class="flex flex-row my-4">
+              <div className="mx-1">
                 {" "}
-                <img src={spotify} alt="spotify" />
-              </a>{" "}
-            </div>
-            <div className="mx-1">
-              {" "}
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://itunes.apple.com/us/podcast/typehints/id1449284832?mt=2&uo=4"
-              >
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy84ODlmMTJjL3BvZGNhc3QvcnNz"
+                >
+                  {" "}
+                  <img src={google} alt="google" />
+                </a>{" "}
+              </div>
+              <div className="mx-1">
                 {" "}
-                <img src={apple} alt="apple" />
-              </a>{" "}
-            </div>
-            <div className="mx-1">
-              {" "}
-              <a
-                rel="noopener noreferrer"
-                target="_blank"
-                href="https://www.stitcher.com/podcast/anchor-podcasts/typehints"
-              >
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://open.spotify.com/show/5zU91Rj1Q9WRLf24d2qQHt"
+                >
+                  {" "}
+                  <img src={spotify} alt="spotify" />
+                </a>{" "}
+              </div>
+              <div className="mx-1">
                 {" "}
-                <img src={sticher} alt="sticher" />
-              </a>{" "}
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://itunes.apple.com/us/podcast/typehints/id1449284832?mt=2&uo=4"
+                >
+                  {" "}
+                  <img src={apple} alt="apple" />
+                </a>{" "}
+              </div>
+              <div className="mx-1">
+                {" "}
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://www.stitcher.com/podcast/anchor-podcasts/typehints"
+                >
+                  {" "}
+                  <img src={sticher} alt="sticher" />
+                </a>
+              </div>{" "}
             </div>
           </div>
-        </div>
+        </div>{" "}
       </div>
     );
   }
