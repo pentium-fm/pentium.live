@@ -22,7 +22,7 @@ class About extends Component {
           </p>
         </div>
 
-        <div class="flex my-4 mt-16">
+        <div className="flex my-4 mt-16">
           <div className="w-1/2 bg-gray-400 md:flex rounded-lg p-6">
             <img
               className="h-16 w-16 md:h-24 md:w-24 rounded-full mx-auto md:mx-0 md:mr-6"

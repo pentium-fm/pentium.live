@@ -58,7 +58,7 @@ class Navbar extends Component {
             </div>
           </div>
           <div className="flex w-full items-center justify-end">
-            <span className="p-5 cursor-pointer">
+            <span className="px-4 py-3 lg:px-8 lg:py-6 cursor-pointer">
               <FontAwesomeIcon
                 icon={faBars}
                 className="text-gray"
