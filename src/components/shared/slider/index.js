@@ -11,9 +11,9 @@ class Slider extends Component {
 
     return (
       <div className="container mx-auto flex py-3 px-5 lg:px-24 lg:py-20 text-white">
-        <div className="w-full px-4 mx-auto flex flex-wrap w-full">
-          <div className="flex w-full md:w-1/2">
-            <div className="flex flex-wrap items-center justify-start content-start w-full">
+        <div className="flex flex-wrap content-start w-full px-4">
+          <div className="flex w-full md:w-2/3">
+            <div className="flex flex-wrap items-center justify-start content-start w-full md:pr-10">
               <div className="flex flex-wrap content-start w-full py-3 md:mb-0 mb-5">
                 <h1 className="font-bold text-lg lg:text-3xl mb-2">
                   {episode.title}
@@ -41,12 +41,12 @@ class Slider extends Component {
             </div>
           </div>
 
-          <div className="hidden md:flex w-1/2">
+          <div className="hidden md:flex w-1/3">
             <div className="flex items-center justify-end w-full">
               <img
                 src={"/static/media/pentium-logo.4b0953b2.jpg"}
                 alt="Pentium Podcast"
-                className="lg:w-64 md:w-56"
+                className="w-full"
               />
             </div>
           </div>
