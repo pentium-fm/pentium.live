@@ -10,11 +10,11 @@ class Slider extends Component {
     let { episode } = this.props;
 
     return (
-      <div className="flex w-full py-3 px-5 lg:px-24 lg:py-20 text-white">
-        <div className="xl:w-3/4 w-full px-4 mx-auto flex flex-wrap w-full">
+      <div className="container mx-auto flex py-3 px-5 lg:px-24 lg:py-20 text-white">
+        <div className="w-full px-4 mx-auto flex flex-wrap w-full">
           <div className="flex w-full md:w-1/2">
-            <div className="flex flex-wrap items-center justify-start w-full">
-              <div className="block w-full py-3 md:mb-0 mb-5">
+            <div className="flex flex-wrap items-center justify-start content-start w-full">
+              <div className="flex flex-wrap content-start w-full py-3 md:mb-0 mb-5">
                 <h1 className="font-bold text-lg lg:text-3xl mb-2">
                   {episode.title}
                 </h1>
@@ -24,16 +24,16 @@ class Slider extends Component {
                 />
               </div>
               <div className="flex flex-wrap flex-row w-full md:py-3">
-                <div className="flex w-full md:w-1/2 mb:pr-3 md:mb-0 mb-3">
-                  <button className="btn bg-white text-black rounded-full py-2 md:py-3 hover:bg-green-custom hover:text-white transition px-4 w-full">
+                <div className="flex w-full md:w-1/3 mb:pr-3 md:mb-0 mb-3">
+                  <button className="bg-white text-black rounded-full hover:bg-green-custom hover:text-white transition w-full text-sm py-2 px-2">
                     <span className="icon">
                       <FontAwesomeIcon icon={faPlay} className="mr-2" />
                     </span>
                     <span className="text ml-2">Listen now</span>
                   </button>
                 </div>
-                <div className="flex w-full md:w-1/2 md:pl-3">
-                  <button className="btn bg-transparent border border-white text-white hover:border-black hover:text-black transition rounded-full py-2 md:py-3 px-4 w-full">
+                <div className="flex w-full md:w-1/3 md:pl-3">
+                  <button className="bg-transparent border border-white text-white hover:border-black hover:text-black transition rounded-full w-full text-sm py-2 px-2">
                     <span className="text ml-2">List of Episodes</span>
                   </button>
                 </div>
