@@ -42,52 +42,52 @@ class Slider extends Component {
           </div>
 
           <div className="hidden md:flex flex-wrap w-1/3">
-            <div className="flex items-center justify-end w-full">
+            <div className="flex items-center justify-start w-full">
               <img
                 src={"/static/media/pentium-logo.4b0953b2.jpg"}
                 alt="Pentium Podcast"
-                className="w-full"
+                className="w-48 shadow"
               />
             </div>
             <div className="flex flex-wrap items-center w-full py-4">
               <div className="flex justify-start w-full mb-3">
-                <h2>MORE PLACES TO LISTEN</h2>
+                <span className="text-sm uppercase">more places to listen</span>
               </div>
               <div className="flex justify-start w-full">
-                <div className="mr-4">
+                <div className="mr-3">
                   <a
                     rel="noopener noreferrer"
                     target="_blank"
                     href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy84ODlmMTJjL3BvZGNhc3QvcnNz"
                   >
-                  <img src={google} alt="google" />
+                    <img class="w-6" src={google} alt="google" />
                   </a>
                 </div>
-                <div className="mr-4">
+                <div className="mr-3">
                   <a
                     rel="noopener noreferrer"
                     target="_blank"
                     href="https://open.spotify.com/show/5zU91Rj1Q9WRLf24d2qQHt"
                   >
-                  <img src={spotify} alt="spotify" />
+                  <img class="w-6" src={spotify} alt="spotify" />
                   </a>
                 </div>
-                <div className="mr-4">
+                <div className="mr-3">
                   <a
                     rel="noopener noreferrer"
                     target="_blank"
                     href="https://itunes.apple.com/us/podcast/typehints/id1449284832?mt=2&uo=4"
                   >
-                  <img src={apple} alt="apple" />
+                    <img class="w-6" src={apple} alt="apple" />
                   </a>
                 </div>
-                <div className="mr-4">
+                <div className="mr-3">
                   <a
                     rel="noopener noreferrer"
                     target="_blank"
                     href="https://www.stitcher.com/podcast/anchor-podcasts/typehints"
                   >
-                  <img src={sticher} alt="sticher" />
+                    <img class="w-6" src={sticher} alt="sticher" />
                   </a>
                 </div>
               </div>
