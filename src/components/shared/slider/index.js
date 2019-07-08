@@ -60,7 +60,7 @@ class Slider extends Component {
                     target="_blank"
                     href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy84ODlmMTJjL3BvZGNhc3QvcnNz"
                   >
-                    <img class="w-6" src={google} alt="google" />
+                    <img className="w-6" src={google} alt="google" />
                   </a>
                 </div>
                 <div className="mr-3">
@@ -69,7 +69,7 @@ class Slider extends Component {
                     target="_blank"
                     href="https://open.spotify.com/show/5zU91Rj1Q9WRLf24d2qQHt"
                   >
-                  <img class="w-6" src={spotify} alt="spotify" />
+                  <img className="w-6" src={spotify} alt="spotify" />
                   </a>
                 </div>
                 <div className="mr-3">
@@ -78,7 +78,7 @@ class Slider extends Component {
                     target="_blank"
                     href="https://itunes.apple.com/us/podcast/typehints/id1449284832?mt=2&uo=4"
                   >
-                    <img class="w-6" src={apple} alt="apple" />
+                    <img className="w-6" src={apple} alt="apple" />
                   </a>
                 </div>
                 <div className="mr-3">
@@ -87,7 +87,7 @@ class Slider extends Component {
                     target="_blank"
                     href="https://www.stitcher.com/podcast/anchor-podcasts/typehints"
                   >
-                    <img class="w-6" src={sticher} alt="sticher" />
+                    <img className="w-6" src={sticher} alt="sticher" />
                   </a>
                 </div>
               </div>
