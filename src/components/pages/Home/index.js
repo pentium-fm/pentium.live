@@ -7,7 +7,8 @@ import {
   getEpisodes,
   getLatestEpisode
 } from "../../../store/reducers";
-import Episodes from '../../shared/episodes'
+import Episodes from '../../shared/episodes';
+import Player from '../../shared/player'
 
 class Home extends Component {
   componentWillMount() {
@@ -38,6 +39,7 @@ class Home extends Component {
             </div>
           </div>
         </div>
+        <Player />
       </main>
     );
   }
@@ -55,4 +57,4 @@ const mapDispatchToProps = dispatch => bindActionCreators({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Home, Slider);
+)(Home);
