@@ -1,13 +1,17 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { bindActionCreators } from 'redux';
+import { setCurrentEpisode } from "../../../store/middleware";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import apple from "../../../images/apple_podcasts.png";
 import google from "../../../images/google_podcasts.png";
 import sticher from "../../../images/stitcher_dark.png";
 import spotify from "../../../images/spotify.png";
+
 class Slider extends Component {
   render() {
-    let { episode } = this.props;
+    let { episode, setPlayingEpisode } = this.props;
 
     return (
       <div className="container mx-auto flex py-3 px-5 lg:px-24 lg:py-20 text-white">
@@ -25,7 +29,12 @@ class Slider extends Component {
               </div>
               <div className="flex flex-wrap flex-row w-full md:py-3">
                 <div className="flex w-full md:w-1/3 mb:pr-3 md:mb-0 mb-3">
-                  <button className="bg-white text-black rounded-full hover:bg-green-custom hover:text-white transition w-full text-sm py-2 px-2">
+                  <button
+                    className="bg-white text-black rounded-full hover:bg-green-custom hover:text-white transition w-full text-sm py-2 px-2"
+                    onClick={() =>{
+                      setPlayingEpisode(episode);
+                    }}
+                  >
                     <span className="icon">
                       <FontAwesomeIcon icon={faPlay} className="mr-2" />
                     </span>
@@ -99,4 +108,11 @@ class Slider extends Component {
   }
 }
 
-export default Slider;
+const mapDispatchToProps = dispatch => bindActionCreators({
+  setPlayingEpisode: setCurrentEpisode
+}, dispatch)
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(Slider);
