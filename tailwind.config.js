@@ -16,6 +16,7 @@ module.exports = {
       white: '#fff',
 
       gray: {
+        50: '#f1f3f4',
         100: '#f7fafc',
         200: '#edf2f7',
         300: '#e2e8f0',
@@ -26,7 +27,7 @@ module.exports = {
         800: '#2d3748',
         900: '#1a202c',
         'custom-light': '#f8f8f8',
-        'custom': '#abb4bc',
+        custom: '#abb4bc',
         'custom-dark': '#36403E'
       },
       red: {
@@ -95,6 +96,7 @@ module.exports = {
         700: '#2b6cb0',
         800: '#2c5282',
         900: '#2a4365',
+        custom: '#0a4181'
       },
       indigo: {
         100: '#ebf4ff',

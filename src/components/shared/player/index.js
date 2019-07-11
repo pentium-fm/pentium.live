@@ -21,17 +21,15 @@ class Player extends Component {
     let { audio } = this.props.current;
 
     return (
-      <div className="flex fixed w-full p-5 bg-white shadow bottom-0 left-0">
-        {audio ? (
-          <audio
-            className="hidden"
-            autoPlay
-            controls
-            ref={audio => (this.audio = audio)}
-          >
-            <source src={audio} type="audio/mpeg" />
-          </audio>
-        ) : ""}
+      <div className={`fixed w-full bg-gray-50 shadow bottom-0 left-0 py-4 ${audio ? 'flex' : 'hidden'}`}>
+        <audio
+          className="flex w-full"
+          autoPlay
+          controls
+          ref={audio => (this.audio = audio)}
+        >
+          <source src={audio} type="audio/mpeg" />
+        </audio>
       </div>
     )
   }

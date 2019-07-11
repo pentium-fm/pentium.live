@@ -57,18 +57,23 @@ class Navbar extends Component {
               </ul>
             </div>
           </div>
-          <div className="flex w-full items-center justify-end">
-            <span className="px-4 py-3 lg:px-8 lg:py-6 cursor-pointer">
-              <FontAwesomeIcon
-                icon={faBars}
-                className="text-gray"
-                onClick={() => {
-                  this.setState({
-                    show: !show
-                  })
-                }}
-              />
-            </span>
+          <div className="flex flex-wrap w-full items-center justify-end">
+            <div className="flex flex-wrap items-center content-start justify-center px-4 py-3 lg:p-4">
+              <span className="text-2xl text-center cursor-pointer w-full">
+                <FontAwesomeIcon
+                  icon={faBars}
+                  className="text-gray"
+                  onClick={() => {
+                    this.setState({
+                      show: !show
+                    })
+                  }}
+                />
+              </span>
+              <span className="text-white text-center text-xs capitalize w-full">
+                menu
+              </span>
+            </div>
           </div>
         </div>
         <Sidebar showSideBar={show} />
