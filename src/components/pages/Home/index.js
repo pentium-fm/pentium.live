@@ -23,7 +23,7 @@ class Home extends Component {
     return (
       <main className="container-fluid">
         <Slider episode={latest} />
-        <div className="flex flex-row content-start items-start flex-wrap min-h-screen w-full bg-white text-black mb-24 pt-10">
+        <div className="flex flex-row content-start items-start flex-wrap min-h-screen w-full bg-white text-black pt-10">
           <div className="container mx-auto">
             <div className="flex w-full items-center justify-center">
               <h1 className="text-lg lg:text-4xl font-bold">Episodes</h1>
