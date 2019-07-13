@@ -5,7 +5,6 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Navbar from "./shared/navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Playlist from "./pages/Playlist";
 import NotFound from "./pages/404";
 import Contact from "./pages/Contact";
 // Styles
@@ -15,12 +14,11 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="main h-full bg-gradient-custom text-white">
+        <div className="bg-gradient-custom text-white">
           <Navbar />
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/about" component={About} />
-            <Route path="/playlist" component={Playlist} />
             <Route path="/contact" component={Contact} />
 
             <Route component={NotFound} />

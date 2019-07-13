@@ -40,14 +40,6 @@ class Navbar extends Component {
                 </li>
                 <li className="p-5">
                   <Link
-                    to="/playlist"
-                    className="hover:text-gray-700 no-underline text-gray"
-                  >
-                    Episodes
-                  </Link>
-                </li>
-                <li className="p-5">
-                  <Link
                     to="/contact"
                     className="hover:text-gray-700 no-underline text-gray"
                   >

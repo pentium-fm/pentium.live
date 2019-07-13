@@ -1,6 +1,3 @@
-html, body {
-  height: 100%;
-}
 .transition {
   transition: all ease-in-out 300ms;
 }
