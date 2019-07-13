@@ -50,11 +50,10 @@ class Navbar extends Component {
             </div>
           </div>
           <div className="flex flex-wrap w-full items-center justify-end">
-            <a href="https://forms.gle/DN2N53cPWKHGaDRZ7" target="_blank">
-              {" "}
+            <a href="https://forms.gle/DN2N53cPWKHGaDRZ7" target="_blank" rel="noopener noreferrer">
               <button className="bg-transparent border border-white text-white hover:border-black hover:text-black transition rounded-full w-full text-sm py-2 px-2">
                 <span className="text ml-2"> Ask a question </span>
-              </button>{" "}
+              </button>
             </a>
 
             <div className="flex flex-wrap items-center content-start justify-center px-4 py-3 lg:p-4">
