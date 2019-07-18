@@ -20,7 +20,7 @@
   "scripts": {
     "tailwind": "node_modules/.bin/tailwind build src/css/tailwind.src.css -c  tailwind.config.js -o src/css/main.css",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "npm run tailwind && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
