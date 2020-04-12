@@ -1,9 +1,0 @@
-.transition {
-  transition: all ease-in-out 300ms;
-}
-.left-n {
-  left: -18rem;
-}
-.bg-gradient-custom {
-  background-image: linear-gradient(20deg, #436edf 10%, #9d1ecf 100%);
-}

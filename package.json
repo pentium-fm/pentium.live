@@ -1,43 +1,21 @@
 {
-  "name": "front",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.17",
-    "@fortawesome/free-brands-svg-icons": "^5.8.1",
-    "@fortawesome/free-regular-svg-icons": "^5.8.1",
-    "@fortawesome/free-solid-svg-icons": "^5.8.1",
-    "@fortawesome/react-fontawesome": "^0.1.4",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-redux": "^7.1.0",
-    "react-router-dom": "^5.0.0",
-    "react-scripts": "3.0.1",
-    "redux": "^4.0.1",
-    "redux-thunk": "^2.3.0",
-    "tailwindcss": "^1.0.4"
-  },
-  "scripts": {
-    "tailwind": "node_modules/.bin/tailwind build src/css/tailwind.src.css -c  tailwind.config.js -o src/css/main.css",
-    "start": "react-scripts start",
-    "build": "npm run tailwind && react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
-  "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.12.4"
-  }
+	"name": "pentium.live",
+	"version": "1.0.0",
+	"description": "Moroccan podcast about dev",
+	"main": "index.js",
+	"repository": "git@github.com:pentium-fm/pentium.live.git",
+	"author": "smakosh <ismai23l@hotmail.com>",
+	"license": "MIT",
+	"dependencies": {
+		"@vojtaholik/gatsby-theme-simplecast": "^1.0.8",
+		"dotenv": "^8.2.0",
+		"gatsby": "^2.20.18",
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1"
+	},
+	"scripts": {
+		"start": "gatsby develop",
+		"lint": "eslint .",
+		"lint:fix": "eslint . --fix"
+	}
 }
